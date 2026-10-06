@@ -14,37 +14,230 @@ dialog{border:1px solid #393734;background:#121316;color:var(--text);border-radi
 @media(min-width:761px) and (max-width:1050px){.hero-price{bottom:68px;width:215px;padding:17px}.hero-actions{max-width:470px}.comparison-total,.comparison-genuina{flex-direction:column;align-items:flex-start;gap:10px}.comparison-total small,.comparison-genuina small{display:inline;margin-left:6px}}
 @media(max-width:760px){.savings-section{margin-top:32px;padding:32px 0}.savings-heading h2{font-size:2rem}.savings-heading h2 em{display:block}.savings-heading>p{max-width:440px}.comparison-card{padding:19px}.comparison-heading{display:block;margin-bottom:8px}.reference-label{display:block;margin-top:10px;font-size:.5625rem;letter-spacing:1px}.service-columns{grid-template-columns:1fr;gap:0}.service-row{padding:11px 0}.service-row dt,.service-row dd{font-size:.875rem}.service-row small{font-size:.71875rem}.bundle-note{margin:13px 0 16px;line-height:1.55}.comparison-versus{grid-template-columns:1fr;gap:7px}.comparison-total,.comparison-genuina{min-height:78px;padding:15px 17px;gap:10px}.comparison-total>span{max-width:115px;font-size:.8125rem}.comparison-total strong{font-size:1.55rem}.comparison-genuina strong{font-size:2rem}.versus-badge{font-size:.6875rem;line-height:1.4}.savings-result{display:block;text-align:center;margin-top:17px}.savings-result p{font-size:.8125rem}.savings-result strong{display:block;margin:0 0 3px;font-size:1.65rem}.savings-result>span{display:block;font-size:.75rem;margin-top:4px}.savings-action{flex-direction:column;gap:12px;text-align:center}.savings-action .button{width:100%}.price-sources{margin-top:16px}}
 
-/* Opening offer: cinematic composition and a compact informational price receipt. */
-.opening-offer{position:relative;isolation:isolate;overflow:hidden;padding:112px 0 32px;background:#0a0b0d;border-bottom:1px solid #ffffff12;scroll-margin-top:0}
-.opening-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(1);opacity:.15;z-index:-2}
-.opening-offer:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090a0dcc 0%,#090a0d38 45%,#090a0d88 100%),linear-gradient(0deg,#0b0c0e,transparent 45%);z-index:-1}
-.opening-grid{display:grid;grid-template-columns:minmax(0,1.17fr) minmax(360px,1fr);grid-template-areas:"copy receipt" "scenes receipt" "offer receipt" "proof receipt";column-gap:52px;row-gap:20px;align-items:start}
-.opening-copy{grid-area:copy;align-self:end}.opening-copy .eyebrow{font-size:.75rem;letter-spacing:1.7px}.opening-copy h1{font-size:clamp(2.5rem,4.9vw,4.25rem);font-weight:800;line-height:1.04;letter-spacing:-2.6px;margin:14px 0}.opening-copy h1 em{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:800;color:var(--gold)}.opening-copy>p{font-size:1rem;line-height:1.6;color:#d1d0cc;max-width:470px}
-.opening-scenes{grid-area:scenes;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:center;max-width:550px;padding:4px 0}.opening-scenes figure{margin:0;position:relative;height:186px;overflow:hidden;border:1px solid #e6b55755;border-radius:9px;background:#15161a;box-shadow:0 12px 24px #0005}.opening-scenes figure:nth-child(1){transform:rotate(-4deg);transform-origin:right bottom}.opening-scenes figure:nth-child(2){height:208px;z-index:1;border-color:#e6b5578c}.opening-scenes figure:nth-child(3){transform:rotate(4deg);transform-origin:left bottom}.opening-scenes img{width:100%;height:100%;object-fit:cover}.opening-scenes figure:first-child img{object-position:72% center}.opening-scenes figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#060709ed 48%);padding:28px 8px 12px;color:#f6f0dc;text-align:center;font-size:.75rem;letter-spacing:.7px;font-weight:700;line-height:1.3}
-.opening-price-block{grid-area:offer;display:flex;gap:22px;align-items:center;padding:18px 0 0;border-top:1px solid #ffffff21;flex-wrap:wrap}.opening-plan>span{font-size:.75rem;letter-spacing:1.5px;color:#ded8cb}.opening-plan>strong{display:block;line-height:1.1;font-size:3.8rem;letter-spacing:-2px;color:var(--gold);white-space:nowrap}.opening-plan strong>small{font-size:1.4rem;letter-spacing:-.5px}.opening-plan strong>span{font-size:.875rem;letter-spacing:0;color:#c9c5bd;margin-left:4px;font-weight:400}.opening-actions{display:flex;flex-direction:column;gap:9px;align-items:flex-start;flex:1;min-width:225px}.opening-actions .button{min-height:50px;gap:12px;padding:12px 20px}.opening-actions>a{color:#bcb8af;font-size:.8125rem;text-decoration:underline;text-underline-offset:3px;line-height:1.5}.opening-actions>a:hover{color:var(--gold)}
-.opening-proof{grid-area:proof;display:flex;flex-wrap:wrap;gap:8px 18px;align-self:start;font-size:.75rem;color:#b8b7b4;line-height:1.5}.opening-proof span{display:flex;align-items:center;gap:6px}.opening-proof .icon{color:var(--gold);width:16px;height:16px}
-.opening-offer .price-receipt{grid-area:receipt;align-self:start;min-width:0;background:#f8f7f3;color:#17181b;border-radius:12px;padding:22px 24px 17px;border:1px solid #fff;box-shadow:0 20px 60px #0005;cursor:default}
-.receipt-heading{border-bottom:1px solid #1b1b1b1f;padding-bottom:11px;margin-bottom:4px}.receipt-kicker{display:block;font-size:.75rem;letter-spacing:1.8px;font-weight:700;color:#76603a;margin-bottom:5px}.receipt-heading h2{font-size:clamp(1.6rem,2.5vw,2.15rem);font-weight:900;letter-spacing:-1px;line-height:1.15}.receipt-heading p{font-size:.8125rem;color:#5f6066;margin-top:5px;line-height:1.5}
-.receipt-services{margin:0}.opening-offer .service-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #191a1c12;padding:7px 0;line-height:1.35}.opening-offer .service-row dt{font-size:.9375rem;font-weight:700;min-width:0}.opening-offer .service-row small{display:inline-block;font-size:.75rem;font-weight:400;color:#606166;margin-left:5px;line-height:1.4}.opening-offer .service-row dd{margin:0;white-space:nowrap;font-size:.9375rem;font-weight:700;font-variant-numeric:tabular-nums}
-.receipt-total{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0 16px;border-top:2px solid #222;margin-top:3px}.receipt-total>span{font-size:.75rem;font-weight:700;line-height:1.5;max-width:135px}.receipt-total strong{font-size:1.7rem;letter-spacing:-.8px;line-height:1.1;white-space:nowrap}.receipt-total small{font-size:.75rem;font-weight:400;color:#68696e;margin-left:5px;letter-spacing:0}
-.receipt-genuina{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:5px;background:#111215;color:var(--gold);border:1px solid #9a793f;border-radius:8px;padding:19px 17px 13px}.receipt-vs{position:absolute;top:-14px;left:50%;transform:translateX(-50%);display:grid;place-items:center;min-width:36px;min-height:26px;background:var(--gold);color:#211909;border:3px solid #f8f7f3;border-radius:5px;font-size:.75rem;font-weight:900;line-height:1.3}.receipt-genuina>div>span{font-family:Georgia,serif;font-style:italic;font-size:1.35rem;color:#fff}.receipt-genuina b{display:block;font-size:.75rem;letter-spacing:1.1px;margin-top:3px}.receipt-genuina>strong{font-size:2.8rem;font-weight:800;letter-spacing:-1.5px;line-height:1.05;white-space:nowrap}.receipt-genuina>strong>small{font-size:1.2rem;letter-spacing:-.5px}.receipt-genuina>strong>span{display:block;text-align:right;font-size:.75rem;letter-spacing:0;color:#c2bfb8;font-weight:400;margin-top:2px}
-.receipt-savings{font-size:.875rem;text-align:center;color:#242521;margin-top:12px;line-height:1.5}.receipt-savings strong{font-weight:800}.receipt-note{font-size:.75rem;color:#676970;line-height:1.5;margin-top:7px;text-align:center}.receipt-sources{font-size:.75rem;color:#5d5e63;margin-top:8px;line-height:1.6}.receipt-sources summary{cursor:pointer;text-decoration:underline;text-underline-offset:2px;width:fit-content;margin:auto}.receipt-sources p{margin:10px 0}.receipt-source-links{display:flex;flex-wrap:wrap;gap:5px 13px}.receipt-source-links a{color:#5f481b;text-decoration:underline}.receipt-sources summary:focus-visible,.receipt-source-links a:focus-visible{outline-color:#77591c}
-#conteudos.section{padding-top:45px}
-@media(min-width:1400px){.opening-grid{column-gap:64px}.opening-scenes figure{height:205px}.opening-scenes figure:nth-child(2){height:230px}}
-@media(min-width:761px) and (max-width:1050px){.opening-grid{grid-template-columns:minmax(0,1fr) minmax(345px,1fr);column-gap:26px;row-gap:18px}.opening-copy h1{font-size:clamp(2.3rem,4.65vw,3.5rem);letter-spacing:-1.6px}.opening-copy>p{font-size:1rem}.opening-copy .eyebrow{letter-spacing:1px}.opening-scenes{gap:7px}.opening-scenes figure{height:165px}.opening-scenes figure:nth-child(2){height:183px}.opening-scenes figcaption{font-size:.75rem;letter-spacing:0;padding-inline:5px}.opening-price-block{gap:12px}.opening-plan>strong{font-size:3rem}.opening-actions{min-width:100%;gap:8px}.opening-actions .button{width:100%}.opening-offer .price-receipt{padding:18px 18px 15px}.opening-offer .service-row small{display:block;margin-left:0}.opening-proof{gap:8px}.desktop-nav{gap:16px}}
-@media(max-width:760px){.opening-offer{padding:99px 0 28px}.opening-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "receipt" "offer" "scenes" "proof";gap:22px;max-width:540px}.opening-copy h1{font-size:clamp(2.25rem,9.6vw,3.3rem);letter-spacing:-1.6px;margin:10px 0 12px}.opening-copy .eyebrow{font-size:.75rem;letter-spacing:1.1px}.opening-copy>p{font-size:1rem;line-height:1.5}.opening-offer .price-receipt{padding:19px 18px 15px;border-radius:10px}.receipt-heading h2{font-size:1.85rem}.receipt-heading p{font-size:.8125rem}.opening-offer .service-row{padding:7px 0;gap:8px}.opening-offer .service-row dt,.opening-offer .service-row dd{font-size:.9375rem}.opening-offer .service-row small{font-size:.75rem;display:block;margin-left:0}.receipt-total{padding-block:11px 16px}.receipt-total>span{max-width:113px}.receipt-total strong{font-size:1.5rem}.receipt-total small{display:block;text-align:right;margin:3px 0 0}.receipt-genuina{padding-inline:14px}.receipt-genuina>strong{font-size:2.6rem}.receipt-genuina b{font-size:.75rem;letter-spacing:.6px}.receipt-note{font-size:.75rem}.opening-price-block{padding-top:0;border-top:0;gap:14px;justify-content:space-between}.opening-plan>strong{font-size:3.3rem}.opening-actions{min-width:100%}.opening-actions .button{width:100%;min-height:52px}.opening-actions>a{font-size:.875rem;align-self:center}.opening-scenes{max-width:none;padding:8px 2px 3px;gap:8px}.opening-scenes figure{height:166px}.opening-scenes figure:nth-child(2){height:185px}.opening-scenes figcaption{font-size:.75rem;letter-spacing:0;padding-inline:5px}.opening-proof{justify-content:center;font-size:.75rem;gap:9px 13px}.opening-backdrop{object-position:65% top}#conteudos.section{padding-top:35px}}
-@media(max-width:360px){.opening-offer .price-receipt{padding-inline:14px}.receipt-genuina{padding-inline:11px;gap:8px}.receipt-genuina>strong{font-size:2.3rem}.receipt-genuina>div>span{font-size:1.2rem}.opening-scenes figure{height:145px}.opening-scenes figure:nth-child(2){height:162px}}
+/* Compact layout: preserve content, with the complete comparison visible on notebooks. */
+html { scroll-padding-top: 24px; }
+body { font-size: .9375rem; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.45rem); letter-spacing: -1px; }
+.container { width: calc(100% - 64px); max-width: 1120px; }
+.section { padding-top: 42px; }
+.site-header { height: 64px; }
+.header-inner { gap: 20px; }
+.brand img { width: 44px; height: 44px; }
+.brand > span { font-size: 1.5rem; }
+.brand small { margin-top: 3px; }
+.desktop-nav { gap: 24px; font-size: .8125rem; }
+.button { min-height: 44px; padding: 10px 18px; gap: 12px; font-size: .875rem; }
+.button-small { min-height: 40px; padding: 8px 15px; }
+.mobile-nav { top: 64px; }
+.section-heading { margin-bottom: 18px; }
+.section-heading h2 { margin-top: 10px; }
+.content-card { height: 290px; }
+.content-card h3 { font-size: 1.5rem; }
+.advantages-section { margin-top: 32px; padding: 30px 0; }
+.compact h2 { font-size: 2rem; }
+.benefits-grid { margin-top: 18px; }
+.floating-chat { width: 44px; height: 44px; right: 18px; bottom: 18px; }
+.floating-chat .icon { width: 23px; height: 23px; }
 
-@media(max-width:760px){.opening-offer .price-receipt{display:flex;flex-direction:column}.receipt-heading{order:0}.receipt-total{order:1}.receipt-genuina{order:2}.receipt-savings{order:3}.receipt-services{order:4;margin-top:12px}.receipt-note{order:5}.receipt-sources{order:6}}
+.opening-offer {
+  position: relative; isolation: isolate; overflow: hidden;
+  padding: 82px 0 22px; background: #0a0b0d; border-bottom: 1px solid #ffffff12;
+  scroll-margin-top: 0;
+}
+.opening-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); opacity: .15; z-index: -2; }
+.opening-offer:before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,#090a0dcc,#090a0d38 45%,#090a0d88),linear-gradient(0deg,#0b0c0e,transparent 45%); z-index: -1; }
+.opening-grid {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,400px);
+  grid-template-areas: "copy receipt" "scenes receipt" "offer receipt" "proof receipt";
+  column-gap: clamp(24px,4vw,56px); row-gap: 14px; align-items: center;
+}
+.opening-copy { grid-area: copy; }
+.opening-copy .eyebrow { font-size: .75rem; letter-spacing: 1.25px; }
+.opening-copy h1 { font-size: clamp(2.35rem,4.2vw,3.4rem); line-height: 1.05; letter-spacing: -1.8px; margin: 10px 0; font-weight: 800; }
+.opening-copy h1 em { font: inherit; color: var(--gold); }
+.opening-copy > p { font-size: .9375rem; line-height: 1.5; color: #d1d0cc; }
+.opening-scenes { grid-area: scenes; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; max-width: 470px; padding: 4px 4px 0; }
+.opening-scenes figure { margin: 0; position: relative; height: 150px; overflow: hidden; border: 1px solid #e6b55755; border-radius: 8px; background: #15161a; box-shadow: 0 10px 22px #0005; }
+.opening-scenes figure:first-child { transform: rotate(-3deg); transform-origin: right bottom; }
+.opening-scenes figure:nth-child(2) { height: 164px; z-index: 1; border-color: #e6b5578c; }
+.opening-scenes figure:last-child { transform: rotate(3deg); transform-origin: left bottom; }
+.opening-scenes img { width: 100%; height: 100%; object-fit: cover; }
+.opening-scenes figure:first-child img { object-position: 72% center; }
+.opening-scenes figcaption { position: absolute; inset: auto 0 0; background: linear-gradient(transparent,#060709ed 48%); padding: 26px 5px 10px; color: #f6f0dc; text-align: center; font-size: .75rem; font-weight: 700; line-height: 1.3; }
+.opening-price-block { grid-area: offer; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding-top: 14px; border-top: 1px solid #ffffff21; }
+.opening-plan > span { font-size: .75rem; letter-spacing: 1px; color: #ded8cb; }
+.opening-plan > strong { display: block; font-size: 3rem; letter-spacing: -1.5px; line-height: 1.1; color: var(--gold); white-space: nowrap; }
+.opening-plan strong > small { font-size: 1.125rem; letter-spacing: -.3px; }
+.opening-plan strong > span { font-size: .75rem; letter-spacing: 0; color: #c9c5bd; margin-left: 4px; font-weight: 400; }
+.opening-actions { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.opening-actions .button { min-height: 44px; }
+.opening-actions > a { color: #bcb8af; font-size: .75rem; text-decoration: underline; text-underline-offset: 3px; line-height: 1.5; }
+.opening-actions > a:hover { color: var(--gold); }
+.opening-proof { grid-area: proof; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .75rem; line-height: 1.4; color: #b8b7b4; }
+.opening-proof span { display: flex; align-items: center; gap: 5px; }
+.opening-proof .icon { color: var(--gold); width: 14px; height: 14px; }
 
-/* Brand marks replace the comparison's text labels. */
-.opening-offer .service-row{min-height:39px;padding-block:7px}
-.opening-offer .service-row dt{display:flex;flex-wrap:wrap;align-items:center;gap:5px 9px;flex:1}
-.service-logo{display:block;width:125px;height:24px;object-fit:contain;object-position:left center;max-width:100%;flex:0 0 auto}
-.service-logo.logo-netflix{width:88px}.service-logo.logo-prime{width:96px}.service-logo.logo-hbo{width:98px}.service-logo.logo-crunchyroll{width:133px}.service-logo.logo-disney{width:83px;height:29px}.service-logo.logo-globoplay{width:108px}.service-logo.logo-apple{width:65px}.service-logo.logo-telecine{width:92px}
-.opening-offer .service-row dt>small{font-size:.75rem;margin:0;line-height:1.35}
-.included-brands{display:flex;align-items:center;gap:6px;font-size:.75rem;color:#737373;flex-wrap:wrap}.included-brands img{height:13px;width:auto;max-width:55px;object-fit:contain}
-.receipt-genuina .receipt-brand{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}.receipt-brand-logo{display:block;width:94px;height:80px;object-fit:contain;background:#f8f7f3;border-radius:5px;padding:3px}.receipt-genuina .receipt-brand b{margin:0;font-size:.75rem;letter-spacing:1px}
-@media(max-width:1050px){.opening-offer .service-row dt{gap:4px 8px}.included-brands{flex-basis:100%}.receipt-brand-logo{width:88px;height:75px}}
+.opening-offer .price-receipt { grid-area: receipt; align-self: start; min-width: 0; width: 100%; background: #f8f7f3; color: #17181b; border-radius: 12px; padding: 14px 18px 12px; border: 1px solid #fff; box-shadow: 0 18px 50px #0005; cursor: default; }
+.receipt-heading { border-bottom: 1px solid #1b1b1b1f; padding-bottom: 8px; margin-bottom: 2px; }
+.receipt-kicker { display: none; }
+.receipt-heading h2 { font-size: 1.625rem; font-weight: 900; letter-spacing: -.65px; line-height: 1.12; }
+.receipt-heading p { font-size: .75rem; color: #5f6066; margin-top: 3px; line-height: 1.3; }
+.receipt-services { margin: 0; }
+.opening-offer .service-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 30px; padding: 4px 0; line-height: 1.25; border-bottom: 1px solid #191a1c12; }
+.opening-offer .service-row dt { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; flex: 1; min-width: 0; font-size: .875rem; font-weight: 700; }
+.opening-offer .service-row dd { margin: 0; white-space: nowrap; font-size: .875rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.opening-offer .service-row dt > small { font-size: .75rem; font-weight: 400; color: #606166; margin: 0; line-height: 1.3; }
+.service-logo { display: block; width: 100px; height: 20px; object-fit: contain; object-position: left center; max-width: 100%; flex: 0 0 auto; }
+.service-logo.logo-netflix { width: 76px; }
+.service-logo.logo-prime { width: 84px; }
+.service-logo.logo-hbo { width: 42px; height: 26px; }
+.service-logo.logo-crunchyroll { width: 116px; }
+.service-logo.logo-disney { width: 60px; height: 24px; }
+.service-logo.logo-globoplay { width: 92px; }
+.service-logo.logo-apple { width: 45px; height: 23px; }
+.service-logo.logo-telecine { width: 44px; height: 26px; }
+.included-brands { display: inline-flex; align-items: center; gap: 5px; font-size: .75rem; color: #737373; }
+.included-brands img { height: 11px; width: auto; max-width: 47px; object-fit: contain; }
+.receipt-total { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 2px solid #222; margin-top: 2px; padding: 8px 0 12px; min-height: 52px; }
+.receipt-total > span { font-size: .75rem; font-weight: 700; line-height: 1.3; max-width: 110px; }
+.receipt-total-value { display: flex; align-items: baseline; gap: 5px; }
+.crossed-price { position: relative; display: inline-flex; align-items: center; padding: 4px 2px; }
+.receipt-total strong { font-size: 1.625rem; letter-spacing: -.8px; line-height: 1.1; white-space: nowrap; }
+.receipt-total small { font-size: .75rem; color: #68696e; font-weight: 400; }
+.price-cross { position: absolute; width: calc(100% + 10px); height: calc(100% + 12px); top: -6px; left: -5px; pointer-events: none; overflow: visible; }
+.price-cross path { fill: none; stroke: #e22b32; stroke-width: 3.5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.receipt-genuina { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; padding: 12px 14px 9px; background: #111215; color: var(--gold); border: 1px solid #9a793f; border-radius: 8px; }
+.receipt-vs { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); display: grid; place-items: center; min-width: 30px; min-height: 22px; background: var(--gold); color: #211909; border: 2px solid #f8f7f3; border-radius: 4px; font-size: .75rem; font-weight: 900; line-height: 1.2; }
+.receipt-genuina .receipt-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.receipt-brand-logo { width: 52px; height: 48px; object-fit: contain; background: #f8f7f3; border-radius: 4px; padding: 2px; }
+.receipt-genuina .receipt-brand b { font-size: .75rem; line-height: 1.4; max-width: 48px; letter-spacing: .5px; }
+.receipt-genuina > strong { font-size: 2.4rem; font-weight: 800; letter-spacing: -1.2px; line-height: 1.05; white-space: nowrap; }
+.receipt-genuina > strong > small { font-size: 1rem; letter-spacing: -.3px; }
+.receipt-genuina > strong > span { display: block; text-align: right; font-size: .75rem; letter-spacing: 0; color: #c2bfb8; font-weight: 400; margin-top: 2px; }
+.receipt-savings { font-size: .8125rem; text-align: center; color: #242521; margin-top: 8px; line-height: 1.4; }
+.receipt-savings strong { font-weight: 800; }
+.receipt-note { font-size: .75rem; color: #676970; line-height: 1.3; margin-top: 5px; text-align: center; }
+.receipt-sources { font-size: .75rem; color: #5d5e63; margin-top: 4px; line-height: 1.4; }
+.receipt-sources summary { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; width: fit-content; margin: auto; }
+.receipt-sources p { margin: 10px 0; }
+.receipt-source-links { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.receipt-source-links a { color: #5f481b; text-decoration: underline; }
+.receipt-sources summary:focus-visible, .receipt-source-links a:focus-visible { outline-color: #77591c; }
+#conteudos.section { padding-top: 36px; }
 
-.service-logo.logo-hbo{width:60px;height:37px}.service-logo.logo-telecine{width:60px;height:35px}.service-logo.logo-disney{width:75px;height:33px}.service-logo.logo-apple{width:55px;height:27px}
+/* Both plans share the same vertical structure and aligned actions. */
+.plans-section .center-heading { margin-bottom: 22px; max-width: 720px; }
+.plans-section .center-heading h2 { font-size: 2rem; margin-top: 8px; }
+.plans-section .center-heading > p { font-size: .875rem; line-height: 1.4; max-width: none; margin-top: 8px; }
+.plans-grid { grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 820px; gap: 20px; }
+.plan-card { display: flex; flex-direction: column; min-width: 0; padding: 18px 22px 14px; border-radius: 12px; }
+.plan-top { margin-bottom: 10px; gap: 10px; }
+.plan-icon { width: 34px; height: 34px; }
+.plan-icon .icon { width: 20px; height: 20px; }
+.plan-category { font-size: .75rem; letter-spacing: .5px; line-height: 1.3; }
+.plan-card h3 { font-size: 1.3rem; letter-spacing: 2px; }
+.plan-card h3 span { font-size: .75rem; margin-left: 7px; letter-spacing: 1px; }
+.plan-subtitle { font-size: .8125rem; line-height: 1.4; margin-top: 6px; }
+.plan-price { margin: 12px 0; flex: 0 0 auto; }
+.plan-price strong { font-size: 3.4rem; letter-spacing: -2px; }
+.plan-price > span { font-size: .9375rem; margin-top: 8px; }
+.plan-price > div { font-size: 1.25rem; margin-top: 7px; }
+.plan-price small { font-size: .75rem; margin-top: 7px; }
+.plan-card > .check-list { flex: 1; margin: 0 0 15px; padding-top: 13px; }
+.plan-card > .check-list li { font-size: .875rem; line-height: 1.35; padding-left: 21px; margin-bottom: 5px; }
+.plan-card > .check-list li:last-child { margin-bottom: 0; }
+.plan-card > .button { margin-top: auto; }
+.plan-footer { font-size: .75rem; line-height: 1.3; margin-top: 9px; }
+.plan-ribbon { font-size: .75rem; line-height: 1.2; letter-spacing: .6px; padding: 5px 10px; right: 18px; top: -13px; }
+.plans-bottom { margin-top: 16px; gap: 22px; font-size: .75rem; }
+.final-cta { margin-top: 36px; }
+
+@media (min-width: 1100px) and (min-height: 800px) {
+  .opening-offer { padding-top: 98px; padding-bottom: 32px; }
+  .opening-scenes figure { height: 166px; }
+  .opening-scenes figure:nth-child(2) { height: 180px; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  .container { width: calc(100% - 40px); }
+  .desktop-nav { gap: 12px; font-size: .75rem; }
+  .header-inner { gap: 12px; }
+  .opening-grid { grid-template-columns: minmax(0,1fr) minmax(330px,360px); gap: 12px 24px; }
+  .opening-copy h1 { font-size: 2.35rem; }
+  .opening-copy .eyebrow { letter-spacing: .5px; }
+  .opening-scenes figure { height: 122px; }
+  .opening-scenes figure:nth-child(2) { height: 136px; }
+  .opening-scenes figcaption { font-size: .75rem; }
+  .opening-price-block { gap: 10px; }
+  .opening-plan > strong { font-size: 2.65rem; }
+  .opening-actions { flex: 1 1 100%; }
+  .opening-actions .button { width: 100%; }
+  .opening-offer .price-receipt { padding-inline: 14px; }
+  .plan-card { padding-inline: 18px; }
+}
+@media (min-width: 761px) and (max-height: 760px) {
+  .opening-offer { padding-top: 74px; padding-bottom: 12px; }
+  .opening-grid { row-gap: 10px; }
+  .opening-copy h1 { font-size: clamp(2.2rem,3.8vw,3.05rem); margin-block: 8px; }
+  .opening-scenes figure { height: 126px; }
+  .opening-scenes figure:nth-child(2) { height: 140px; }
+  .opening-price-block { padding-top: 10px; }
+  .opening-offer .price-receipt { padding-top: 12px; padding-bottom: 10px; }
+  .receipt-heading { padding-bottom: 6px; }
+  .receipt-heading h2 { font-size: 1.5rem; }
+  .opening-offer .service-row { padding-block: 3px; min-height: 28px; }
+  .receipt-total { padding-block: 7px 10px; }
+  .receipt-genuina { padding-block: 10px 7px; }
+  .plans-section { padding-top: 28px; }
+  .plans-section .center-heading h2 br { display: none; }
+  .plans-section .center-heading h2 em:before { content: " "; }
+}
+@media (max-width: 760px) {
+  .container { width: calc(100% - 32px); }
+  .header-inner { gap: 10px; }
+  .brand > span { font-size: 1.4rem; }
+  .header-inner > .button { min-height: 40px; font-size: .8125rem; }
+  .menu-button { width: 40px; height: 40px; }
+  .opening-offer { padding: 80px 0 22px; }
+  .opening-grid { grid-template-columns: minmax(0,1fr); grid-template-areas: "copy" "receipt" "offer" "scenes" "proof"; gap: 16px; max-width: 460px; }
+  .opening-copy h1 { font-size: clamp(2rem,8.5vw,2.65rem); margin: 8px 0; letter-spacing: -1.2px; }
+  .opening-copy .eyebrow { font-size: .75rem; letter-spacing: .6px; }
+  .opening-copy > p { font-size: .875rem; }
+  .opening-offer .price-receipt { display: block; padding: 14px 16px 12px; }
+  .opening-offer .service-row dt { gap: 4px 6px; }
+  .opening-price-block { padding: 0; border: 0; gap: 12px; }
+  .opening-plan > strong { font-size: 2.8rem; }
+  .opening-actions { flex: 1 1 100%; gap: 8px; }
+  .opening-actions .button { width: 100%; }
+  .opening-actions > a { align-self: center; font-size: .8125rem; }
+  .opening-scenes { max-width: none; gap: 8px; padding-top: 2px; }
+  .opening-scenes figure { height: 118px; }
+  .opening-scenes figure:nth-child(2) { height: 132px; }
+  .opening-proof { justify-content: center; gap: 8px 12px; }
+  .opening-backdrop { object-position: 65% top; }
+  .section { padding-top: 32px; }
+  .section-heading h2, .compact h2 { font-size: 1.9rem; }
+  .plans-section .center-heading h2 { font-size: 1.875rem; }
+  .plans-section .center-heading > p { font-size: .875rem; }
+  .plans-grid { grid-template-columns: minmax(0,1fr); max-width: 460px; gap: 24px; }
+  .plan-card { padding: 18px 20px 16px; }
+  .plans-bottom { gap: 8px; font-size: .75rem; }
+  .content-grid { margin-inline: -16px; padding-inline: 16px; }
+  .genre-filters { margin-inline: -16px; padding-inline: 16px; }
+  .content-card { height: 280px; }
+  .content-card h3 { font-size: 1.5rem; }
+  .floating-chat { right: 12px; bottom: 12px; }
+}
+@media (max-width: 380px) {
+  .opening-offer .price-receipt { padding-inline: 12px; }
+  .opening-offer .service-row { gap: 6px; }
+  .service-logo.logo-globoplay { width: 80px; }
+  .included-brands { gap: 4px; }
+  .included-brands img { height: 9px; max-width: 39px; }
+  .receipt-total > span { max-width: 100px; }
+  .receipt-total strong { font-size: 1.45rem; }
+  .receipt-genuina { gap: 8px; padding-inline: 10px; }
+  .receipt-genuina .receipt-brand { gap: 6px; }
+  .receipt-genuina > strong { font-size: 2.15rem; }
+  .opening-scenes figure { height: 104px; }
+  .opening-scenes figure:nth-child(2) { height: 118px; }
+}
